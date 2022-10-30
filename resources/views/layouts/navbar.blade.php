@@ -1,7 +1,7 @@
 <section id="nav">
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">olxforex</a>
+        <a class="navbar-brand" href="{{ route('index') }}">olxforex</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars-staggered"></i>
@@ -43,8 +43,8 @@
                   </li>
 
                   <li><a class="nav-link" href="pages/blogPromotion.html">blog promotion</a></li>
-                  <li><a class="nav-link" href="pages/about.html">About</a></li>
-                  <li><a class="nav-link" href="pages/contactUs.html">Contact us</a></li>
+                  <li><a class="nav-link" href="{{ route('about') }}">About</a></li>
+                  <li><a class="nav-link" href="{{ route('contact') }}">Contact us</a></li>
                 </ul>
               </li>
             </ul>
