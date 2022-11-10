@@ -5,15 +5,39 @@
 @endsection
 
 @section('content')
-      <!-- main sec -->
-  <section id="main">
-    <div class="container" data-aos="fade-down" data-aos-duration="1500">
-      <h1>We are creating a future for investors</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quidem, quae voluptates corrupti eveniet
-        possimus asperiores consequatur at aut dicta et aliquid repellendus sequi nostrum amet. Vel, dicta? Incidunt
-        earum nesciunt beatae nobis nisi minima ex alias et quasi amet officiis, cumque pariatur numquam, adipisci modi
-        at blanditiis corrupti fuga!</p>
-    </div>
+   <!-- main sec -->
+   <section id="main">
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="{{ asset('asset/img/4.png') }}" />
+          <div class="text">
+            <h2>We are the investment pioneers</h2>
+            <p>Start investing now</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ asset('asset/img/2.png') }}" />
+          <div class="text">
+            <h2>We provide economic analytics</h2>
+            <p>read now</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="{{ asset('asset/img/1.png') }}" />
+          <div class="text">
+            <h2>Our educational courses</h2>
+            <p>watch now</p>
+            <a href="#" class="btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+
   </section>
 
   <!-- investment pioneers sec -->
@@ -32,12 +56,12 @@
             <span class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
             </span>
-            <a class="button-text" href="#" >Learn More</a>
+            <a class="button-text" href="#">Learn More</a>
           </button>
-          
+
         </div>
         <div class="pioneers-img col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-          <img src="{{ asset('asset/img/undraw_investing_re_bov7.svg')}}">
+          <img src="{{ asset('asset/img/ox.png') }}">
         </div>
       </div>
     </div>
@@ -78,7 +102,7 @@
           </div>
 
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 card">
-            <img class="card-img-top" src="{{ asset('asset/img/undraw_discount_d-4-bd.svg')}}" alt="Card image cap">
+            <img class="card-img-top" src="{{ asset('asset/img/undraw_discount_d-4-bd.svg') }}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -88,7 +112,7 @@
           </div>
 
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 card">
-            <img class="card-img-top" src="{{ asset('asset/img/undraw_credit_card_re_blml.svg')}}" alt="Card image cap">
+            <img class="card-img-top" src="{{ asset('asset/img/undraw_credit_card_re_blml.svg') }}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
@@ -98,7 +122,7 @@
           </div>
 
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 card">
-            <img class="card-img-top" src="{{ asset('asset/img/undraw_mobile_pay_re_sjb8.svg')}}" alt="Card image cap">
+            <img class="card-img-top" src="{{ asset('asset/img/undraw_mobile_pay_re_sjb8.svg') }}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's

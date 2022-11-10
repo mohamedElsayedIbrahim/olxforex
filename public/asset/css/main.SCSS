@@ -1,26 +1,79 @@
+@use './Colors' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 
+@mixin red {
+    color: $maincolor;
+    border: 2px solid $maincolor;
+    transition: 0.5s;
+    &:hover{
+        background: $maincolor;
+        border: 2px solid $maincolor;
+        color: #FFF;
+    }
+}
 @mixin green {
-    color: #38ec89;
-    border: 2px solid #38ec89;
+    color: $greencolor;
+    border: 2px solid $greencolor;
     transition: 0.5s;
     &:hover{
-        background: #38ec89;
-        border: 2px solid #38ec89;
+        background: $greencolor;
+        border: 2px solid $greencolor;
         color: #FFF;
     }
 }
-@mixin blue {
-    color: #23b2ff;
-    border: 2px solid #23b2ff;
+
+@mixin greenAnimition {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: $greencolor;
+    background: transparent;
     transition: 0.5s;
+    border: 2px solid $greencolor;
     &:hover{
-        background: #23b2ff;
-        border: 2px solid #23b2ff;
-        color: #FFF;
+        color: white;
+        box-shadow: inset 0 -100px 0 0 $greencolor;
     }
 }
+
+// btn animation
+.centerAnimation {
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 2px solid $greencolor;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    // text-transform: uppercase;
+    // font-size: 16px;
+    transition: 0.5s;
+    z-index: 1;
+    // font-family: inherit;
+    color: $greencolor;
+    &:hover {
+        color: #FFF;
+        &::before {
+            width: 150%;
+           }
+       }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-25deg);
+        width: 0%;
+        height: 60vh;
+        z-index: -1;
+        transition: 0.5s;
+        background:$greencolor;
+       }
+   }
+   
+
+
 
 // btn animation
 .learn-more {
@@ -35,6 +88,7 @@
         width: 50px;
         height: 45px;
         background: #2f2e41;
+        background: $secondcolor;
         border-radius: 5px;
         .icon {
             transition: 0.5s;
@@ -97,10 +151,10 @@
         width: 18rem;
         margin: 15px auto;
         color: #000;
-        box-shadow: 5px 5px 15px -5px #23dbff26;
+        box-shadow: 5px 5px 15px -5px #b0284133;
         transition: 0.3s;
         &:hover{
-            box-shadow: 5px 5px 20px -15px #23dbff;
+            box-shadow: 5px 5px 20px -15px #b0284133;
         }
         img{
             width: 100%;
@@ -131,7 +185,7 @@
     outline: none;
     overflow: hidden;
     &:hover{
-                border: 1px solid #ced4da;
+        border: 1px solid #ced4da;
     }
 }
 .mouse-cursor-gradient-tracking div {
@@ -145,7 +199,7 @@
     top: var(--y);
     width: var(--size);
     height: var(--size);
-    background: radial-gradient(circle closest-side, #23daff3d, transparent);
+    background: radial-gradient(circle closest-side, #b0284133, transparent);
     transform: translate(-50%, -50%);
     transition: width 0.2s ease, height 0.2s ease;
 }
@@ -157,7 +211,7 @@
 
 // selection,scrollbar
 ::selection{
-    background-color: #23b2ff;
+    background-color: $maincolor;
     color: #FFF;
 }
 ::-webkit-scrollbar {
@@ -167,7 +221,10 @@
     background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-    background: #23b2ff;
+    background: $maincolor;
+}
+h1{
+    color: $greencolor;
 }
 
 // to Up btn
@@ -177,7 +234,7 @@
     bottom: 30px;
     right: 30px;
     z-index: 1;
-    color: #23b2ff;
+    color: $maincolor;
     cursor: pointer;
     display: none;
     animation: toUp 1s ease-in-out infinite alternate;
@@ -212,15 +269,85 @@ html {
     }
 }
 
-// navbar
-nav{
-    .navbar-brand{
-        color: #23b2ff;
-        font-family: 'Fredoka One', cursive;
-        &:hover,&:focus{
-            color: #23b2ff;
+#nav{
+    .dropdown-menu{
+        .active{
+            background-color: transparent;
+            color: #000;
         }
     }
+ul{
+    li{
+        a{
+            position: relative;
+            &::after{
+                content: "";
+                width: 0%;
+                height: 3px;
+                background-color: $maincolor;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                opacity: 0.5;
+                transition: 0.5s;
+                orientation: center;
+            }
+            &:hover{
+                &::after{
+                    width: 100%;
+                }
+
+            }
+        }
+        .active{
+            position: relative;
+            &::after{
+                content: "";
+                width: 100%;
+                height: 3px;
+                background-color: $maincolor;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                opacity: 0.5;
+                transition: 0.5s;
+                orientation: center;
+            }
+            
+        }
+    }
+}
+
+
+nav#navitems {
+    background: #ffffff;
+}
+#navlogo{
+    .navbar-brand{
+        img{
+            max-width: 100%;
+            width: 200px;
+            @media (max-width:320px) {
+                width: 150px;
+            }
+        }
+    }
+    .social-links {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        @media (max-width:991px) {
+            justify-content: flex-start;
+            li{
+                padding: 5px;
+            }
+        }
+    }
+}
+// navbar
+nav{
     .center{
         text-align: center;
         display: flex;
@@ -249,7 +376,7 @@ nav{
             position: absolute;
             left: -100px;
             @media (max-width:991px) {
-                display: contents;
+                // display: contents;
             }
         }
         .dropdown-toggle {
@@ -263,19 +390,23 @@ nav{
     }
     .navbar-toggler{
         box-shadow: none;
-        border:2px solid #23b2ff;
+        border:2px solid $maincolor;
+        // width: 100%;
+        color: $maincolor;
         &:focus{
             box-shadow: none;
         }
     }
     .navbar-toggler[aria-expanded="true"] {
-        border:2px solid #23dbff;
+        border:2px solid $greencolor;
+        color: $greencolor;
     }
-    .green{
-        @include green()
+    .red{
+        @include red()
     }
 }
 
+}
 
 
 // footer
@@ -288,14 +419,12 @@ nav{
     p {
         text-align: justify;
     }
-    .mapouter {
+    .footer-link{
         display: flex;
-        align-content: stretch;
-        justify-content: center;
-    }
-    .gmap_canvas {
-        border: 2px solid #23dbff80;
-        border-radius: 10px;
+        align-items: center;
+        p{
+            font-size: 0.9rem;
+        }
     }
     li{
         color: #000 ;
@@ -330,29 +459,58 @@ nav{
     #index{
         background:url(../img/pattern-randomized.svg);
         background-attachment: fixed;
-        min-height: 100vh;
         #main{
-            margin-top: 10px;
-            min-height: calc(100vh - 66px);
-            background: url(../img/1.png);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-            color: #FFF;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            .container {
-                backdrop-filter: saturate(0.8);
-                padding: 15px;
-                p{
-                    width: 50%;
-                    @media (max-width:767px) {
+                .swiper-slide{
+                    position: relative;
+                    .text{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
                         width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        color: #FFF;
+                        padding: 0 25px;
+                        a{
+                            width: fit-content;
+                            color: #FFF;
+                            border: 2px solid #FFF;
+                            transition: 0.5s;
+                            padding: 10px 15px;
+                            backdrop-filter: blur(5px);
+                            &:hover{
+                                background-color: #FFF;
+                                border: 2px solid #FFF;
+                                color: #000;
+                            }
+                        }
+                    }
+                    img{
+                    max-width: 100%;
+                    min-width: 100%;
+                    height: 85vh;
+                    filter: blur(5px);
+                    @media (max-width:991px) {
+                        height: 40vh;
+                    }
+                    animation: zoom 3s infinite alternate;
+                    }
+                    @keyframes zoom {
+                        0%{
+                            transform: scale(1);
+                        }
+                        100%{
+                            transform: scale(1.05);
+                        }
                     }
                 }
-            }
+                .swiper-pagination-bullet {
+                    width: 10px;
+                    height: 10px;
+                    background: #f0f8ff;
+                }
         }
         #pioneers{
             min-height: 60vh;
@@ -387,10 +545,10 @@ nav{
                         width: 18rem;
                         margin: 15px auto;
                         color: #000;
-                        box-shadow: 5px 5px 15px -5px #23dbff26;
-                        transition: 0.3s;
+                        box-shadow: 5px 5px 15px -5px #b028411c;
+                        transition: 0.5s;
                         &:hover{
-                            box-shadow: 5px 5px 20px -15px #23dbff;
+                            box-shadow: 5px 5px 20px -15px #b02841;
                         }
                         img{
                             width: 100%;
@@ -454,10 +612,10 @@ nav{
                     background:#FFF;
                     padding: 10px 15px;
                     border-radius: 5px;
-                    @include green()
+                    @include red()
                 }
                 a{
-                    color: #23b2ff;
+                    color: $maincolor;
                     opacity: 0.8;
                     text-decoration: none;
                     &:hover{
@@ -509,7 +667,7 @@ nav{
                 background:#FFF;
                 padding: 10px 15px;
                 border-radius: 5px;
-                @include blue()
+                @include green()
             }
             a{
                 color: #66f3a5;
@@ -526,6 +684,8 @@ nav{
 // about page
 #about{
     #main{
+        background:url(../img/pattern-randomized.svg);
+        background-attachment: fixed;
         display: flex;
         align-items: center;
         .row{
@@ -545,7 +705,8 @@ nav{
         }
         border-radius: 50px;
         button{
-            background-color: #ecf8ff;
+            background-color: #ecfff1;
+            color: $greencolor;
             border-radius: 50px;
         }
     h2 {
@@ -561,6 +722,8 @@ nav{
 // contact Us page
 #contact{
     #main{
+        background:url(../img/pattern-randomized.svg);
+        background-attachment: fixed;
         .contact-text{
             display: flex;
             align-items: center;
@@ -572,8 +735,8 @@ nav{
                     max-height: 150px;
                     box-shadow: none;
                 }
-                .blue{
-                    @include blue()
+                .green{
+                    @include greenAnimition()
                 }
             }
         }
@@ -595,9 +758,9 @@ nav{
 
 //accounts page
 #accounts{
-    background:url(../img/pattern-randomized.svg);
-    background-attachment: fixed;
     #main{
+        background:url(../img/pattern-randomized.svg);
+        background-attachment: fixed;
 
         .AllBTN{
             display: flex;
@@ -606,13 +769,17 @@ nav{
                 margin: 10px;
                 padding: 10px 15px;
             }
-            .blue{
-                @include blue();
-            }
             .green{
                 @include green();
             }
+            .red{
+                @include red();
+            }
         }
+    }
+    #Text{
+        background:url(../img/pattern-randomized.svg);
+        background-attachment: fixed;
     }
 }
 
@@ -642,8 +809,8 @@ nav{
                 p{
                     text-align: start;
                 }
-                .blue{
-                    @include blue();
+                .green{
+                    @include greenAnimition();
                 }
             }
         }
@@ -653,6 +820,9 @@ nav{
 // Analytics page
 #analytics{
     #main{
+        h1{
+            color: $secondcolor;
+        }
         background:url(../img/pattern-randomized.svg);
         background-attachment: fixed;
         .row {
@@ -680,29 +850,41 @@ nav{
 
 // videos page
 #Videos{
-        #main{
+    #ads {
+        display: flex;
+        justify-content: center;
+        background:url(../img/pattern-randomized.svg);
+        background-attachment: fixed;
+        img{
+            max-width: 100%;
+        }
+    }
+    #main{
             background:url(../img/pattern-randomized.svg);
             background-attachment: fixed;
             // .container{
                 .main-container{
-                    min-height: 88vh;
+                    // min-height: 88vh;
                     max-width: 100vw;
                     margin: 5px;
+                    display: flex;
+                    align-items: flex-start;
                     #mainMenu{
+
                         display: flex;
                         flex-direction: column;
                         // justify-content: center;
                         justify-content: flex-start;;
                         align-items: center;
-                        max-height: 55vh;
+                        max-height: 60vh;
                         ::-webkit-scrollbar {
                             width: 5px;
                         }
                         ::-webkit-scrollbar-thumb{
-                            background-color: #23b2ff75;
+                            background-color: $maincolor;
                         }
                         .active{
-                            background: #23b2ff;
+                            background: $maincolor;
                             outline: none;
                             border: none;
                         }
@@ -717,9 +899,14 @@ nav{
                         }
                     }
                     #mainAccordion{
-                        // display: flex;
-                        // align-items: center;
-                        max-height: 55vh;
+                        display: flex;
+                        align-items: center;
+                        max-height: 80vh;
+                        height: 80vh;
+                        // height: auto;
+                        @media (max-width:991px) {
+                            height: auto;
+                        }
                         backdrop-filter: blur(3px);
                         background: #d7fad83b;
                         .card{
@@ -727,18 +914,29 @@ nav{
                             .card-body{
                                 iframe{
                                     max-width: 100%;
-                                    max-height: 45vh;
+                                    max-height: 70vh;
+                                    min-height: 350px;
+                                    // height: auto;
+                                    @media (max-width:991px) {
+                                        height: auto;
+                                    }
                                 }
                             }
                         }
                     }
-                    #ads {
+                    #mainAds{
                         display: flex;
-                        justify-content: center;
+                        min-height: 60vh;
+                        max-height: 60vh;
                         img{
                             max-width: 100%;
+                            max-height: 100%;
+                        }
+                        @media (max-width:991px) {
+                            display: none;
                         }
                     }
+
                 }
             // }
         }
@@ -754,8 +952,8 @@ nav{
             display: flex;
             justify-content: center;
             margin: 0;
-            .green{
-                @include green()
+            .red{
+                @include red()
             }
             iframe {
                 width: 100%;
@@ -769,6 +967,8 @@ nav{
 // corporate page
 #corporate{
     #main{
+        background:url(../img/pattern-randomized.svg);
+        background-attachment: fixed;
         .card{
             width: auto;
             .form-outline{
@@ -795,6 +995,8 @@ nav{
 // currency page
 #currency{
     #currencySec{
+        background: url(../img/pattern-randomized.svg);
+        background-attachment: fixed;
         .form{
             .form-group{
                 margin-top: 10px;
@@ -802,22 +1004,58 @@ nav{
                     padding: 5px 10px;
                     outline: none;
                     box-shadow: none;
-                    background: #f2fdff70;
+                    background: #216e381c;
                     color: #00161b;
                     border: 1px solid;
+                    transition: 0.7s;
+                    &:hover{
+                        background: #216e3836;
+                    }
+                }
+                #ans{
+                    &:hover{
+                        background: #216e381c;
+                    }
                 }
                 input[type=number]::-webkit-inner-spin-button {
                     -webkit-appearance: none;
                     appearance: none;
+                    transition: 0.7s;
+                    &:hover{
+                        background: #216e3836;
+                    }
                 }
                 option:hover,option:focus,option:active{
-                    background-color: #23dbff;
-                    color: #23dbff;
+                    background-color: #216e381c;
+                    color: #216e381c;
                 }
                 .form-control{
                     appearance: auto;
                 }
             }
+            .arrow {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i{
+                    background: #216e381c;
+                    font-size: 1.5rem;
+                    border: 1px solid;
+                    padding: 10px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    &:hover{
+                        background: #216e3836;
+                    }
+                    @media (max-width:991px) {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        button{
+            margin: 15px 0;
         }
         .green{
             margin-top:15px;
@@ -827,9 +1065,9 @@ nav{
 }
 
 #calender{
-    background: url(../img/pattern-randomized.svg);
-    background-attachment: fixed;
     #main{
+        background: url(../img/pattern-randomized.svg);
+        background-attachment: fixed;
         .container{
             .row{
                 margin: 0;
@@ -851,4 +1089,211 @@ nav{
             }
         }
     }
+}
+
+
+#loader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #d0ebd3;
+    backdrop-filter: blur(50px);
+    background: rgb(255 255 255 / 90%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    transition: 1s;
+    .circle {
+        background: transparent;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        border: 15px solid $maincolor;
+        border-radius: 50%;
+        border-bottom-color: #000;
+        animation: circle 1s infinite linear ;
+    }
+    @keyframes circle {
+        0% {
+            transform: rotate(0turn);
+        }
+        100%{
+              transform: rotate(1turn);
+          }
+    }
+    div {
+        margin: 0 5px;
+        animation: loop 0.7s infinite alternate ;
+
+        &:nth-child(1),&:nth-child(3) {           
+            width: 20px;
+            height: 60px;
+            background-color: $maincolor;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -10px);
+                width: 8px;
+                height: 10px;
+                background: $maincolor;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 10px);
+                width: 8px;
+                height: 10px;
+                background: $maincolor;
+            }
+          }
+        &:nth-child(2),&:nth-child(4) {
+            width: 20px;
+            height: 75px;
+            background-color: $greencolor;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -10px);
+                width: 8px;
+                height: 10px;
+                background: $greencolor;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 10px);
+                width: 8px;
+                height: 10px;
+                background: $greencolor;
+            }
+          }
+            &:nth-child(2){
+              animation-duration: 0.4s;
+            }
+            &:nth-child(3){
+              animation-duration: 0.6s;
+            }
+            &:nth-child(4){
+              animation-delay: 0.8s;
+            }
+            &:nth-child(4){
+              animation-delay: 0.8s;
+            }
+      }
+}
+@keyframes loop {
+    to {
+        opacity: 0.2;
+        transform: translate3d(0px, -20px, 0px);
+      }
+}
+
+
+#loading{
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 98;
+    transition: 1s;
+    .circle {
+        background: transparent;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        border: 15px solid $maincolor;
+        border-radius: 50%;
+        border-bottom-color: #000;
+        animation: circle 1s infinite linear ;
+    }
+    @keyframes circle {
+        0% {
+            transform: rotate(0turn);
+        }
+        100%{
+              transform: rotate(1turn);
+          }
+    }
+    div {
+        margin: 0 5px;
+        animation: loop 0.7s infinite alternate ;
+
+        &:nth-child(1),&:nth-child(3) {           
+            width: 20px;
+            height: 60px;
+            background-color: $maincolor;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -10px);
+                width: 8px;
+                height: 10px;
+                background: $maincolor;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 10px);
+                width: 8px;
+                height: 10px;
+                background: $maincolor;
+            }
+          }
+        &:nth-child(2),&:nth-child(4) {
+            width: 20px;
+            height: 75px;
+            background-color: $greencolor;
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -10px);
+                width: 8px;
+                height: 10px;
+                background: $greencolor;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 10px);
+                width: 8px;
+                height: 10px;
+                background: $greencolor;
+            }
+          }
+            &:nth-child(2){
+              animation-duration: 0.4s;
+            }
+            &:nth-child(3){
+              animation-duration: 0.6s;
+            }
+            &:nth-child(4){
+              animation-delay: 0.8s;
+            }
+            &:nth-child(4){
+              animation-delay: 0.8s;
+            }
+      }
 }

@@ -34,6 +34,15 @@
 
   @include('layouts.navbar')
 
+    <!-- loader sec -->
+    <div id="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <!-- <div class="circle"></div> -->
+    </div>
+
   @yield('content')
   
   @include('layouts.footer')
@@ -75,6 +84,7 @@
   </script>
   <!-- main js file -->
   <script src="{{ asset('asset/js/validate.min.js') }}"></script>
+  <script src="{{ asset('asset/js/loader.js') }}"></script>
   <script src="{{ asset('asset/js/main.min.js') }}"></script>
 </body>
 

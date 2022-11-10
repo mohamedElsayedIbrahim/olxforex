@@ -15,14 +15,14 @@ let myRequest = new XMLHttpRequest();
                   if(response[i].contentDetails.itemCount < 2){
                     x = "video"
                   }
-                  console.log(response[i])
+                  // console.log(response[i])
                     main.innerHTML += `
                     <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12 card">
                     <img class="card-img-top" src="${response[i].snippet.thumbnails.high.url}" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">${response[i].snippet.title}</h5>
                       <p class="card-title">${response[i].contentDetails.itemCount} ${x}</p>
-                      <a href="http://127.0.0.1:5500/pages/videos.html?list=${response[i].id}" class="btn blue">Watch PlayList</a>
+                      <a href="http://127.0.0.1:5500/pages/videos.html?list=${response[i].id}" class="btn green">Watch PlayList</a>
                     </div>
                   </div>
                     `
