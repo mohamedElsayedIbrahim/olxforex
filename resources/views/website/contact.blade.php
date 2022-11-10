@@ -81,3 +81,7 @@
     </section>
 </div>
 @endsection
+
+@section('script')
+<script src="{{ asset('asset/js/main.min.js') }}"></script>
+@endsection

@@ -87,7 +87,6 @@
   <!-- main js file -->
   <script src="{{ asset('asset/js/validate.min.js') }}"></script>
   <script src="{{ asset('asset/js/loader.js') }}"></script>
-  <script src="{{ asset('asset/js/main.min.js') }}"></script>
 </body>
 
 </html>

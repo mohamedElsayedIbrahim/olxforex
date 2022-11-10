@@ -66,7 +66,7 @@ let loading = document.querySelector("#loading");
                 <span class="circle" aria-hidden="true">
                   <span class="icon arrow"></span>
                 </span>
-                <a class="button-text" onclick="fetchHandler()" href="${response[i].url}" >Read this news</a>
+                <a class="button-text" target="_blank" onclick="fetchHandler()" href="${response[i].url}" >Read this news</a>
               </button>
               
             </div>

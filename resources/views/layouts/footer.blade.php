@@ -24,10 +24,10 @@
                   <a class="nav-link" aria-current="page" href="pages/market.html">Market</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/news.html">News</a>
+                  <a class="nav-link" href="{{ route('news') }}">News</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/calender.html">Calender</a>
+                  <a class="nav-link" href="{{route('calender')}}">Calender</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="pages/analytics.html">Analytics</a>
@@ -38,10 +38,10 @@
             <div class="col-6">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/accounts">Accounts</a>
+                  <a class="nav-link" href="{{route('accounts')}}">Accounts</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="pages/corporate.html">Local Depositor HFM</a>
+                  <a class="nav-link active" aria-current="page" href="{{route('corporate')}}">Local Depositor HFM</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="pages/blog.html">blog promotion</a>

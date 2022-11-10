@@ -50,5 +50,6 @@
 @endsection
 
 @section('script')
+<script src="{{ asset('asset/js/main.min.js') }}"></script>
 <script src="{{ asset('asset/js/currency.js') }}"></script>
 @endsection

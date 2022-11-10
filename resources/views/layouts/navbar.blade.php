@@ -40,16 +40,16 @@
             <a class="nav-link" href="pages/market.html">Market</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/news.html">News</a>
+            <a class="nav-link" href="{{ route('news') }}">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/calender.html">Calender</a>
+            <a class="nav-link" href="{{route('calender')}}">Calender</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/accounts.html">Accounts</a>
+            <a class="nav-link" href="{{route('accounts')}}">Accounts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/corporate.html">Local Depositor HFM</a>
+            <a class="nav-link" href="{{route('corporate')}}">Local Depositor HFM</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/analytics.html">Analytics</a>

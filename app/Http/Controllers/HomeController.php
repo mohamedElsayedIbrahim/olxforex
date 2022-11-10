@@ -25,4 +25,26 @@ class HomeController extends Controller
     {
         return view('website.education');
     }
+
+    public function playlist()
+    {
+        return view('website.playlist');
+    }
+
+    public function news()
+    {
+        return view('website.news');
+    }
+
+    public function calender()
+    {
+        return view('website.calender');
+    }
+
+    public function accounts()
+    {
+        return view('website.accounts');
+    }
+    
+    
 }
