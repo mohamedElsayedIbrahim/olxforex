@@ -6,6 +6,10 @@
 
 @section('content')
     <!-- main sec -->
+
+    <div id="about">
+
+    
     <section id="main">
         <div class="container">
             <h1 class="text-center">who are we</h1>
@@ -20,7 +24,7 @@
                         nesciunt nihil commodi ducimus placeat accusantium cum architecto perferendis doloremque ratione
                         deleniti omnis optio odio deserunt rerum ut fugit, quibusdam eius minus voluptatem. Fuga odio
                         earum hic!</p>
-                    <a href="#" class="btn mouse-cursor-gradient-tracking">Connect us</a>
+                    <a href="{{ route('contact') }}" class="btn mouse-cursor-gradient-tracking">Connect us</a>
                 </div>
             </div>
 
@@ -63,4 +67,5 @@
 
         </div>
     </section>
+</div>
 @endsection

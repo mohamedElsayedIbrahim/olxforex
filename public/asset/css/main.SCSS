@@ -1069,24 +1069,27 @@ nav{
         background: url(../img/pattern-randomized.svg);
         background-attachment: fixed;
         .container{
-            .row{
-                margin: 0;
-                overflow-x: auto;
-                .table {
-                    ::-webkit-scrollbar {
-                        width: 5px;
-                    }  
-                    --bs-table-accent-bg: #92dfff30;            
-                    --bs-table-striped-bg: #23b2ff03;  
-                    backdrop-filter: blur(2px);
-                    background: #f0f8ff5e;
-                    td {
-                        @media (max-width:767px) {
-                            font-size: 0.7rem;
-                        }
-                    }     
-                }
+            div{
+                display: flex;
             }
+            // .row{
+            //     margin: 0;
+            //     overflow-x: auto;
+            //     .table {
+            //         ::-webkit-scrollbar {
+            //             width: 5px;
+            //         }  
+            //         --bs-table-accent-bg: #92dfff30;            
+            //         --bs-table-striped-bg: #23b2ff03;  
+            //         backdrop-filter: blur(2px);
+            //         background: #f0f8ff5e;
+            //         td {
+            //             @media (max-width:767px) {
+            //                 font-size: 0.7rem;
+            //             }
+            //         }     
+            //     }
+            // }
         }
     }
 }
@@ -1104,7 +1107,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 99;
+    z-index: 1000;
     transition: 1s;
     .circle {
         background: transparent;

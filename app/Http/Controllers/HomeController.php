@@ -15,4 +15,14 @@ class HomeController extends Controller
     {
         return view('website.about');
     }
+
+    public function currency()
+    {
+        return view('website.currency');
+    }
+    
+    public function education()
+    {
+        return view('website.education');
+    }
 }

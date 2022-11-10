@@ -6,6 +6,9 @@
 
 @section('content')
    
+<div id="contact">
+
+
     <!-- main sec -->
     <section id="main">
         <div class="container">
@@ -76,5 +79,5 @@
             </div>
         </div>
     </section>
-
+</div>
 @endsection

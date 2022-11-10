@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="{{ asset('asset/css/main.min.css') }}" />
 </head>
 
-<body class="custom-scrollbar" id="index">
+<body class="custom-scrollbar">
 
   @include('layouts.navbar')
 
@@ -82,6 +82,8 @@
 
     });
   </script>
+
+  @yield('script')
   <!-- main js file -->
   <script src="{{ asset('asset/js/validate.min.js') }}"></script>
   <script src="{{ asset('asset/js/loader.js') }}"></script>

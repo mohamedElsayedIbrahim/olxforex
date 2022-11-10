@@ -6,6 +6,7 @@
 
 @section('content')
    <!-- main sec -->
+   <div id="index">
    <section id="main">
 
     <div class="swiper mySwiper">
@@ -135,4 +136,5 @@
       </div>
     </div>
   </section>
+</div>
 @endsection
