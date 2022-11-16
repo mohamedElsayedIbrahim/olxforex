@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticalController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DepoisterController;
 use App\Http\Controllers\HomeController;
@@ -25,6 +26,8 @@ Route::get('/education/watch',[HomeController::class,'playlist'])->name('playlis
 Route::get('/news',[HomeController::class,'news'])->name('news');
 Route::get('/econimic/calender',[HomeController::class,'calender'])->name('calender');
 Route::get('/accounts',[HomeController::class,'accounts'])->name('accounts');
+Route::get('/analytical',[ArticalController::class,'index'])->name('articals');
+Route::get('/analytical/post/{id}',[ArticalController::class,'show'])->name('articals.post');
 
 Route::get('/local-depositor-hfm',[DepoisterController::class,'index'])->name('corporate');
 Route::post('/local-depositor-hfm/new',[DepoisterController::class,'store'])->name('corporate.store');

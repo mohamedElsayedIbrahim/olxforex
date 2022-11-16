@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="keywords" content="@yield('keywords')">
+  <meta name="description" content="@yield('description')">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" href="{{ asset('asset/img/business.svg')}}" />
   <title>@yield('title')</title>

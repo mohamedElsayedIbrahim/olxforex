@@ -30,7 +30,7 @@
                   <a class="nav-link" href="{{route('calender')}}">Calender</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="pages/analytics.html">Analytics</a>
+                  <a class="nav-link" href="{{ route('articals') }}">Analytics</a>
                 </li>
               </ul>
             </div>
@@ -44,7 +44,7 @@
                   <a class="nav-link active" aria-current="page" href="{{route('corporate')}}">Local Depositor HFM</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="pages/blog.html">blog promotion</a>
+                  <a class="nav-link" aria-current="page" href="#">blog promotion</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{ route('about') }}">About Us</a>
@@ -58,19 +58,13 @@
 
           <ul class="navbar-nav social-links me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" href=""><i class="fa-brands fa-facebook"></i></a>
+              <a class="nav-link active" href="https://www.facebook.com/groups/328906598577021" target="_blank"><i class="fa-brands fa-facebook"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a class="nav-link" href="https://t.me/OLXFOREXGROUP" target="_blank"><i class="fa-brands fa-telegram"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa-brands fa-twitter"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa-brands fa-whatsapp"></i></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a class="nav-link" href="https://www.youtube.com/channel/UC8awfemtBVvs44r39GIsvGA" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             </li>
           </ul>
 

@@ -52,7 +52,7 @@
             <a class="nav-link" href="{{route('corporate')}}">Local Depositor HFM</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/analytics.html">Analytics</a>
+            <a class="nav-link" href="{{ route('articals') }}">Analytics</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/blogPromotion.html">blog promotion</a>
