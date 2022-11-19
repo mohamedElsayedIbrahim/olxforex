@@ -2,7 +2,7 @@
  <section id="nav">
   <nav id="navlogo" class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="{{ asset('asset/img/logo2.png') }}"></a>
+      <a class="navbar-brand" href="{{ route('index') }}"><img src="{{ asset('asset/img/logo2.png') }}" class="w-75"></a>
 
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="dropdown">
@@ -53,6 +53,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('articals') }}">Analytics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('forex') }}">Forex</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="pages/blogPromotion.html">blog promotion</a>

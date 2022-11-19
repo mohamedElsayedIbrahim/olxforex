@@ -47,6 +47,9 @@
                   <a class="nav-link" aria-current="page" href="#">blog promotion</a>
                 </li>
                 <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="{{ route('forex') }}">Forex</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="{{ route('about') }}">About Us</a>
                 </li>
                 <li class="nav-item">

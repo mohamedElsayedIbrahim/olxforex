@@ -46,5 +46,8 @@ class HomeController extends Controller
         return view('website.accounts');
     }
     
-    
+    public function forex()
+    {
+        return view('website.forex');
+    }
 }

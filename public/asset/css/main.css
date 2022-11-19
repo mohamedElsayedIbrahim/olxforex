@@ -188,6 +188,10 @@ h1 {
   color: #216e38;
 }
 
+.g-theme {
+  color: #216e38;
+}
+
 .toUp {
   position: fixed;
   font-size: 2vh;
@@ -422,20 +426,33 @@ html body {
   padding: 0 25px;
 }
 #index #main .swiper-slide .text a {
+  position: relative;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #FFF;
+  border: transparent;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  color: #FFF;
-  border: 2px solid #FFF;
-  transition: 0.5s;
-  padding: 10px 15px;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  color: #212121;
+  overflow: hidden;
 }
-#index #main .swiper-slide .text a:hover {
-  background-color: #FFF;
-  border: 2px solid #FFF;
-  color: #000;
+#index #main .swiper-slide .text a::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  background: linear-gradient(135deg, #212121 0%, #212121 45%, #373737 50%, #989898 75%);
+  border-radius: 5px 0 5px 0;
+  box-shadow: -25px -25px 10px 13px #787777;
+  transition: 0.2s;
+}
+#index #main .swiper-slide .text a:hover::before {
+  width: 30px;
+  height: 30px;
+  box-shadow: -5px -5px 10px 13px #787777;
 }
 #index #main .swiper-slide img {
   max-width: 100%;
@@ -519,6 +536,48 @@ html body {
 }
 #index #courses .allcards .row .card .card-body p {
   text-align: justify;
+}
+#index #reviews {
+  background: #FFF;
+  color: #000;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+#index #reviews .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#index #reviews .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+#index #reviews .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  flex-shrink: 0;
+  width: 60%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}
+#index #reviews .swiper-slide img {
+  max-height: 500px;
+}
+#index #reviews span.swiper-pagination-bullet.swiper-pagination-bullet-active,
+#index #reviews span.swiper-pagination-bullet.swiper-pagination-bullet {
+  height: 1.2vh;
+  width: 1.2vh;
+  background: #b02841;
+}
+#index #reviews .swiper-button-next,
+#index #reviews .swiper-button-prev {
+  color: #b02841;
 }
 
 #login #main {

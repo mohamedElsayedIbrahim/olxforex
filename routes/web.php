@@ -28,6 +28,7 @@ Route::get('/econimic/calender',[HomeController::class,'calender'])->name('calen
 Route::get('/accounts',[HomeController::class,'accounts'])->name('accounts');
 Route::get('/analytical',[ArticalController::class,'index'])->name('articals');
 Route::get('/analytical/post/{id}',[ArticalController::class,'show'])->name('articals.post');
+Route::get('/chart/forex',[HomeController::class,'forex'])->name('forex');
 
 Route::get('/local-depositor-hfm',[DepoisterController::class,'index'])->name('corporate');
 Route::post('/local-depositor-hfm/new',[DepoisterController::class,'store'])->name('corporate.store');

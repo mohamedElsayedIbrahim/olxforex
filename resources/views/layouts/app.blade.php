@@ -7,7 +7,7 @@
   <meta name="keywords" content="@yield('keywords')">
   <meta name="description" content="@yield('description')">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="{{ asset('asset/img/business.svg')}}" />
+  <link rel="shortcut icon" href="{{ asset('asset/img/logoicon.png')}}" />
   <title>@yield('title')</title>
   <link rel="stylesheet" href="{{ asset('asset/css/flickity.min.css') }}" />
   <!-- CSS only -->
@@ -28,6 +28,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- Link Swiper's CSS -->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  @yield('style')
   <!-- main css file -->
   <link rel="stylesheet" href="{{ asset('asset/css/main.min.css') }}" />
 </head>
