@@ -16,7 +16,7 @@
             <div class="row center mb-3">
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <img src="{{ asset('asset/img/undraw_mobile_apps_re_3wjf.svg') }}" style="width: 100%">
+                    <img src="{{ asset('asset/img/undraw_typing_re_d4sq.svg') }}" style="width: 100%">
                 </div>
 
                 <div class="contact-text col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
