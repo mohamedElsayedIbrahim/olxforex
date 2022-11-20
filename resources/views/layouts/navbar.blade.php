@@ -31,13 +31,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent1">
         <ul class="navbar-nav center me-auto mb-2 mb-lg-0">
           <li class="nav-item">
+            <a class="nav-link" href="{{ route('index') }}">Home </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{{ route('currency') }}">Currency Change </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="{{ route('education') }}">Education </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pages/market.html">Market</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('news') }}">News</a>
@@ -58,7 +58,7 @@
             <a class="nav-link" href="{{ route('forex') }}">Forex</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/blogPromotion.html">blog promotion</a>
+            <a class="nav-link" href="pages/blogPromotion.html">promotion</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('about') }}">About</a>
