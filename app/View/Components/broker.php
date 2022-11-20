@@ -2,7 +2,9 @@
 
 namespace App\View\Components;
 
+use App\Models\Broker as brokerModel;
 use Illuminate\View\Component;
+
 
 class broker extends Component
 {
@@ -23,7 +25,7 @@ class broker extends Component
      */
     public function render()
     {
-        
-        return view('components.broker');
+        $brokers = brokerModel::all();
+        return view('components.broker',compact('brokers'));
     }
 }
