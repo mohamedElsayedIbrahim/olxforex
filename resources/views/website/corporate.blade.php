@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <img src="{{asset('asset/img/undraw_booking_re_gw4j.svg')}}" style="width: 100%;">
+                    <img src="{{asset('asset/img/logo2.png')}}" class="w-100">
                 </div>
 
             </div>

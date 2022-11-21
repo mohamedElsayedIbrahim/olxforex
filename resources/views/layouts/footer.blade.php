@@ -21,9 +21,6 @@
                   <a class="nav-link active" aria-current="page" href="{{ route('education') }}">Education</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="pages/market.html">Market</a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link" href="{{ route('news') }}">News</a>
                 </li>
                 <li class="nav-item">

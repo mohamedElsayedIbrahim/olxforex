@@ -87,3 +87,134 @@ function validatePassword() {
 }
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function search(e){
+  let tbodyX = ""
+  let total = 0
+  for(let i = 0; i < mainArr.length; i++) {
+      if(mainArr[i].objProduct.includes(e)){
+                  total += parseInt(mainArr[i].objPrice)
+                  tbodyX += 
+                  `
+                  <tr>
+                      <td>${i+1}</td>
+                      <td>${mainArr[i].objProduct}</td>
+                      <td>${mainArr[i].objCount}</td>
+                      <td>${mainArr[i].objPrice}</td>
+                      <td>${mainArr[i].objDate}</td>
+                      <td><button onclick="update(${i})" id="Update" class="btn yellow">تحديث</button></td>
+                      <td><button onclick="delate(${i})" id="Delete" class="btn red">حذف</button></td>
+                  </tr>
+                  `
+                  tbody.innerHTML = `
+                  ${tbodyX}
+                  <tr>
+                  <td class="col">المبلغ الاجمالى</td>
+                  <td class="TotalIncome" colspan="6">${total}</td>
+                  </tr>
+                  `
+      }
+  }
+}
+
+search1.addEventListener("keyup",function(){
+  search2.value = ""
+  let tbodyX = ""
+  let total = 0
+  search(search1.value)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function x(){
+  search2.value = ""
+  let tbodyX = ""
+  let searchX = ""
+  let total = 0
+
+
+  let newarr = []
+  for(let i = 0; i < mainArr.length; i++) {
+
+          if(mainArr[i].objProduct.includes(search1.value)){
+
+              Allsearchbar.style.display = "block"
+              searchbar.setAttribute("class", "searchbar");
+              searchX += `<p class="p">${mainArr[i].objProduct}</p>`
+              Allsearchbar.innerHTML = searchX
+              Allsearchbar.appendChild(searchbar);
+              let p = document.querySelectorAll('.p')
+  
+              for(let k = 0; k < p.length; k++) {
+                  p[k].onclick = function(){
+                      search1.value = p[k].innerHTML
+                      x()
+                      Allsearchbar.style.display = "none"
+                  }
+              }
+      }
+
+
+
+
+          if(mainArr[i].objProduct.includes(search1.value)){
+          total += parseInt(mainArr[i].objPrice)
+          tbodyX += 
+          `
+          <tr>
+              <td>${i+1}</td>
+              <td>${mainArr[i].objProduct}</td>
+              <td>${mainArr[i].objCount}</td>
+              <td>${mainArr[i].objPrice}</td>
+              <td>${mainArr[i].objDate}</td>
+              <td><button onclick="update(${i})" id="Update" class="btn yellow">تحديث</button></td>
+              <td><button onclick="delate(${i})" id="Delete" class="btn red">حذف</button></td>
+          </tr>
+          `
+          tbody.innerHTML = `
+          ${tbodyX}
+          <tr>
+          <td class="col">المبلغ الاجمالى</td>
+          <td class="TotalIncome" colspan="6">${total}</td>
+          </tr>
+          `
+          }
+          if(search1.value == ""){
+              Allsearchbar.style.display = "none"
+          }
+  }
+
+}
