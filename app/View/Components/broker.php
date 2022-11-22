@@ -13,8 +13,11 @@ class broker extends Component
      *
      * @return void
      */
+
+    public $items;
     public function __construct()
     {
+        $this->items = brokerModel::all();
         //
     }
 
@@ -25,7 +28,6 @@ class broker extends Component
      */
     public function render()
     {
-        $brokers = brokerModel::all();
-        return view('components.broker',compact('brokers'));
+        return view('components.broker',['items']);
     }
 }
