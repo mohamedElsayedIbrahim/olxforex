@@ -21,7 +21,7 @@ let myRequest = new XMLHttpRequest();
                     <div class="card-body">
                       <h5 class="card-title">${response[i].snippet.title}</h5>
                       <p class="card-title">${response[i].contentDetails.itemCount} ${x}</p>
-                      <a href="http://127.0.0.1:5500/pages/videos.html?list=${response[i].id}" class="btn green">Watch PlayList</a>
+                      <a href="/education/watch?list=${response[i].id}" class="btn green">Watch PlayList</a>
                     </div>
                   </div>
                     `
