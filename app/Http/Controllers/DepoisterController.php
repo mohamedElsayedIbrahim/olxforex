@@ -32,7 +32,7 @@ class DepoisterController extends Controller
             'type'=>$request->customerServiceType,
         ]);
 
-        Mail::to('olxforex@yahoo.com')->send(new DepositerMail($data));
+        Mail::to('info@olxforex.com')->send(new DepositerMail($data));
 
         return redirect(route('corporate'))->with('message','Your request has been set successfully, We will keeping in touch with you soon');
     }
