@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\DepositerMail;
 use App\Models\Depoister;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class DepoisterController extends Controller
 {
@@ -22,13 +24,15 @@ class DepoisterController extends Controller
             'customerServiceType'=>'required|string',
         ]);
 
-        Depoister::create([
+        $data  = Depoister::create([
             'fullName'=>$request->customerName,
             'account'=>$request->customerAccountNumber,
             'phone'=>$request->customerPhoneNumber,
             'amount'=>$request->customerAmount,
             'type'=>$request->customerServiceType,
         ]);
+
+        Mail::to('olxforex@yahoo.com')->send(new DepositerMail($data));
 
         return redirect(route('corporate'))->with('message','Your request has been set successfully, We will keeping in touch with you soon');
     }

@@ -58,15 +58,16 @@
                 </div>
                 <div class="message-body">
                     <p class="center">
-                    Dear Mr <b>Masoud</b> their's a new<b>customer contact</b> is registered successfully!
+                    Dear Mr <b>Masoud</b> their's a new<b>customer depositer</b> is registered successfully!
                     <br/>
                     here is his detials.
                     </p>
                     <ul>
-                        <li>contact Name: {{$contact->fullName}}</li>
-                        <li>contact Mail: {{$contact->mail}}</li>
-                        <li>contact subject: {{$contact->subject}}</li>
-                        <li>Message: {{$contact->message}}</li>
+                        <li>deposit Name: {{$deposit->fullName}}</li>
+                        <li>deposit account: {{$deposit->account}}</li>
+                        <li>deposit phone: {{$deposit->phone}}</li>
+                        <li>amount: <strong>{{$deposit->amount}}</strong></li>
+                        <li>type: <strong>{{$deposit->type}}</strong></li>
                     </ul>
                     <hr/>
                     <div class="center">
