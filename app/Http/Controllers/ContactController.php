@@ -30,7 +30,7 @@ class ContactController extends Controller
             'message'=>$request->inputMassage
         ]);
 
-        Mail::to('mohamdeesayed@outlook.com')
+        Mail::to('olxforex@yahoo.com')
         ->send(new ContacMail($contact));
 
         return redirect(route('contact'))->with('message','Your Request is submmiting Successfully');
