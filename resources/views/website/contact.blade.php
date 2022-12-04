@@ -19,7 +19,7 @@
                     <img src="{{ asset('asset/img/undraw_typing_re_d4sq.svg') }}" style="width: 100%">
                 </div>
 
-                <div class="contact-text col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="contact-text flex flex-column col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                     @include('snnipt.validate')
                     @include('snnipt.session')
                     <form method="POST" action="{{ route('contact.store') }}" class="g-3 needs-validation" novalidate>

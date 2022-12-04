@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContacMail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -21,12 +23,15 @@ class ContactController extends Controller
             'inputMassage'=>'required|min:3|max:1000|string',
         ]);
 
-        Contact::create([
+        $contact = Contact::create([
             'fullName'=>$request->inputName,
             'mail'=> $request->inputEmail,
             'subject'=>$request->inputSubject,
             'message'=>$request->inputMassage
         ]);
+
+        Mail::to('mohamdeesayed@outlook.com')
+        ->send(new ContacMail($contact));
 
         return redirect(route('contact'))->with('message','Your Request is submmiting Successfully');
     }
