@@ -2,22 +2,18 @@
 
 namespace App\View\Components;
 
-use App\Models\Broker as brokerModel;
+use App\Models\Broker;
 use Illuminate\View\Component;
 
-
-class broker extends Component
+class brokerData extends Component
 {
     /**
      * Create a new component instance.
      *
      * @return void
      */
-
-    public $items;
     public function __construct()
     {
-        $this->items = brokerModel::all();
         //
     }
 
@@ -28,6 +24,7 @@ class broker extends Component
      */
     public function render()
     {
-        return view('components.broker',['items']);
+        $brokers = Broker::all();
+        return view('components.broker-data', compact('brokers'));
     }
 }

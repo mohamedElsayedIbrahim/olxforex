@@ -45,7 +45,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('calender')}}">Calender</a>
           </li>
-          <x-broker></x-broker>
+          <x-broker-data/>
           <li class="nav-item">
             <a class="nav-link" href="{{route('corporate')}}">Local Depositor HFM</a>
           </li>

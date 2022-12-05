@@ -3,7 +3,7 @@
       Brokers
     </p>
     <ul class="dropdown-menu">
-      @foreach ($items as $item)
+      @foreach ($brokers as $item)
       <li><a class="dropdown-item" href="#">{{$item->title}}</a></li>
       @endforeach
     </ul>
