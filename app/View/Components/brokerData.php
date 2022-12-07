@@ -25,6 +25,6 @@ class brokerData extends Component
     public function render()
     {
         $brokers = Broker::all();
-        return view('components.broker-data', compact('brokers'));
+        return view('components.broker-data',['brokers'=>$brokers]);
     }
 }
