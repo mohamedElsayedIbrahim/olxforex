@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +14,9 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('website.about');
+        $about = Setting::where('type','=','about')->first();
+        
+        return view('website.about', compact('about'));
     }
 
     public function currency()

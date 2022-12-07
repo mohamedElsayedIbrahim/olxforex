@@ -18,12 +18,7 @@
                     <img src="{{ asset('asset/img/undraw_navigator_a479.svg') }}" style="width: 100%">
                 </div>
                 <div class="about-text col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
-                    <h2>We are your way to a successful investment</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis minima hic reprehenderit
-                        atque, voluptates esse itaque sed quas. Exercitationem sapiente aspernatur, expedita, molestias
-                        nesciunt nihil commodi ducimus placeat accusantium cum architecto perferendis doloremque ratione
-                        deleniti omnis optio odio deserunt rerum ut fugit, quibusdam eius minus voluptatem. Fuga odio
-                        earum hic!</p>
+                    {!!$about->content!!}
                     <a href="{{ route('contact') }}" class="btn mouse-cursor-gradient-tracking">Connect us</a>
                 </div>
             </div>
