@@ -53,4 +53,9 @@ class HomeController extends Controller
     {
         return view('website.forex');
     }
+
+    public function maintainnce()
+    {
+        return view('website.maintainnce');
+    }
 }
