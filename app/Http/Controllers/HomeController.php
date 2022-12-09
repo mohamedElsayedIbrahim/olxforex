@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Models\Setting;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('welcome');
+        $sliders = Slider::all();
+        return view('welcome',compact('sliders'));
     }
 
     public function about()

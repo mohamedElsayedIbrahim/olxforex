@@ -11,30 +11,7 @@
 
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="{{ asset('asset/img/4.png') }}" />
-          <div class="text">
-            <h2>We are the investment pioneers</h2>
-            <p>Start investing now</p>
-            <a href="#" class="btn">Learn More</a>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="{{ asset('asset/img/2.png') }}" />
-          <div class="text">
-            <h2>We provide economic analytics</h2>
-            <p>read now</p>
-            <a href="#" class="btn">Learn More</a>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <img src="{{ asset('asset/img/1.png') }}" />
-          <div class="text">
-            <h2>Our educational courses</h2>
-            <p>watch now</p>
-            <a href="#" class="btn">Learn More</a>
-          </div>
-        </div>
+        @include('snnipt.slider')
       </div>
 
       <div class="swiper-pagination"></div>
@@ -146,27 +123,7 @@
       <!-- Swiper -->
       <div class="swiper mySwiper1" dir="ltr"  data-aos="fade-down" data-aos-duration="1500">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="{{ asset('asset/img/1.jpg') }}" />
-          </div>
-          <div class="swiper-slide">
-            <img src="{{ asset('asset/img/1.jpg') }}" />
-          </div>
-          <div class="swiper-slide">
-            <img src="{{ asset('asset/img/1.jpg') }}" />
-          </div>
-          <div class="swiper-slide">
-            <img src="{{ asset('asset/img/1.jpg') }}" />
-          </div>
-          <div class="swiper-slide">
-            <img src="{{ asset('asset/img/1.jpg') }}" />
-          </div>
-          <div class="swiper-slide">
-            <img src="{{ asset('asset/img/1.jpg') }}" />
-          </div>
-          <div class="swiper-slide">
-            <img src="{{ asset('asset/img/1.jpg') }}" />
-          </div>
+          @include('snnipt.brokers')
         </div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
