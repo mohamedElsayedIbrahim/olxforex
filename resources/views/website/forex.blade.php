@@ -11,7 +11,7 @@
     <section class="container">
         <h1 class="text-center my-5">Forex charts</h1>
         <div class="row">
-            <div class="col-sm-9">
+            <div class="col-sm-8">
                 <!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
     <div id="tradingview_5541d"></div>
